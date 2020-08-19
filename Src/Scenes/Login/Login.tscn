@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Login/Login.gd" type="Script" id=1]
+
+[node name="Login" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreateServerButton" type="Button" parent="."]
+margin_left = 362.0
+margin_top = 367.0
+margin_right = 502.0
+margin_bottom = 411.0
+text = "Create Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JoinServerButton" type="Button" parent="."]
+margin_left = 520.0
+margin_top = 368.0
+margin_right = 660.0
+margin_bottom = 412.0
+text = "Join Server"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IpField" type="LineEdit" parent="."]
+margin_left = 362.0
+margin_top = 300.0
+margin_right = 660.0
+margin_bottom = 339.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CreateServerButton" to="." method="_on_CreateServerButton_pressed"]
+[connection signal="pressed" from="JoinServerButton" to="." method="_on_JoinServerButton_pressed"]
